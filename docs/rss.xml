@@ -1,5 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Write down blog</title><link>https://zane-p-f.github.io</link><description>responsible for write down my learning diary</description><copyright>Write down blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://zane-p-f.github.io</link></image><lastBuildDate>Thu, 02 Jan 2025 15:30:04 +0000</lastBuildDate><managingEditor>Write down blog</managingEditor><ttl>60</ttl><webMaster>Write down blog</webMaster><item><title>January.2.2025</title><link>https://zane-p-f.github.io/post/January.2.2025.html</link><description>- Vocabulary 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Write down blog</title><link>https://zane-p-f.github.io</link><description>responsible for write down my learning diary</description><copyright>Write down blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://zane-p-f.github.io</link></image><lastBuildDate>Mon, 06 Jan 2025 08:09:11 +0000</lastBuildDate><managingEditor>Write down blog</managingEditor><ttl>60</ttl><webMaster>Write down blog</webMaster><item><title>Python</title><link>https://zane-p-f.github.io/post/Python.html</link><description>from jiashenzhu
+
+import paramiko
+import time
+
+username = 'python'
+password = '123'
+
+for i in range(11,16):
+    ip = '192.168.11.' + str(i)
+
+    ssh_client = paramiko.SSHClient()
+    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh_client.connect(hostname=ip,username=username,
+                       password=password,look_for_keys=False)
+    command = ssh_client.invoke_shell()
+
+    print('=-=-=-=-=-=-=-=-=-=-=-=-=-=')
+    print('已经成功登陆交换机 Layer3Switch-' + str(i-10) + ' ' + ip)
+    # 关闭分屏功能
+    command.send('screen-length 0 temporary\n')
+    # 进入系统视图
+    command.send('sys\n')
+    command.send('dis int bri\n')
+    time.sleep(2)
+
+    #抓取回显，放入output变量
+    output = command.recv(65535).decode('ASCII')
+    print(output)
+
+    #保存结果到python脚本同目录下的result文件夹中
+    # 注意，Windows的目录写法与Linux不同，遇到了需灵活调整
+    f1 = open(f'.\\result\\{ip}_dis_int_bri.txt','w')    
+    f1.write(output)
+    f1.close()
+
+    ssh_client.close()。</description><guid isPermaLink="true">https://zane-p-f.github.io/post/Python.html</guid><pubDate>Mon, 06 Jan 2025 08:08:50 +0000</pubDate></item><item><title>January.2.2025</title><link>https://zane-p-f.github.io/post/January.2.2025.html</link><description>- Vocabulary 
 Exactly,实际上 regular,定期的 politics,政治 series,系列 comb,梳理 shave,剃 negative,负面的 comment,评论 scared,害怕的 write down,记录 bored,无聊的 least,至少 stressed,紧张的 nervous,紧张的 smiled微笑的
 fall - fell - fallen 掉下
 ring - rang - rung 响。</description><guid isPermaLink="true">https://zane-p-f.github.io/post/January.2.2025.html</guid><pubDate>Thu, 02 Jan 2025 15:22:09 +0000</pubDate></item><item><title>January.1.2025</title><link>https://zane-p-f.github.io/post/January.1.2025.html</link><description>- Vocabulary &#13;
