@@ -21,3 +21,10 @@ unbelievable，令人不可置信的，chin，下巴，lover，爱好者|们
 nickname，绰号， brilliant，出色的，
 uninteresting，没意思的， interesting，有意思的，
 ----------------------------------------------------------------------------------------------------------
+
+Sunday - February - 2 - 2025 - Talk about Halloween
+Vocabulary:
+
+realize，意识到，ignore，忽略，costume，服装，fit，合适的，astronaut，宇航员，fashionable，潮、时尚，witch，巫婆，clown，小丑，strange，奇怪的，tight，紧的，loose，宽松的，tear - tore - torn，撕破，kimono，和服，tie - tight，系(鞋带，领带)，match，相匹配，bat，蝙蝠，exactly，确切的
+
+----------------------------------------------------------------------------------------------------------
